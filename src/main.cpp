@@ -7,6 +7,9 @@
 
 #define DEBUG 1
 
+#define BUFFER_LEN 20
+#define APP_DATA_LEN 20
+
 lora lorafiit(RFM_CS, RFM_INT , RFM_RST);
 
 void setup() {
@@ -17,13 +20,13 @@ void setup() {
   delay(100);
 
 
-  uint8_t buffer[20];
-  uint8_t sizeOfBuffer = 20;
+  uint8_t buffer[BUFFER_LEN];
+  uint8_t sizeOfBuffer = BUFFER_LEN;
 
   lorafiit.On();
 
   while (!lorafiit.Register(buffer, sizeOfBuffer)) {
-      Serial.println("Registration not successfull.");
+    Serial.println("Registration not successfull.");
   }
 
   Serial.println("Registration successful, configuration data from server recieved");
@@ -31,8 +34,8 @@ void setup() {
 
 void loop() {
 
-  uint8_t appData[20] = "App data from node";//user application data
-  uint8_t sizeOfAppData = 20;//size in B
+  uint8_t appData[APP_DATA_LEN] = "App data from node";//user application data
+  uint8_t sizeOfAppData = APP_DATA_LEN; //size in B
 
   delay(10000);
 
