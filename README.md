@@ -28,11 +28,11 @@ Application data should be visible in both of these devices, altough you may fin
 
 ## Possible issues
 
-**1. Your MIC throws error** <br>
+**1. Your MIC throws error**
 - If you are seeing the *"Bad MIC"* error, start your diagnostic by verifying that you have the PRESHARED_KEY value set correctly in your **.env** file in LoNES.
 - Don't forget to export your *.env* file after every modification.
 
-**2. The registration process keeps failing and restarting** <br>
+**2. The registration process keeps failing and restarting**
 - Similarly to the previous point, first try to verify the PRESHARED_KEY value.
 - If it is set correctly, try to restart the LoNES and LoAP devices.
 - Check the log messages on LoNES and LoAP devices and verify that both of your devices are receiving at least some LoRa@FIIT messages. If it does, the connectivity is not an issue.
