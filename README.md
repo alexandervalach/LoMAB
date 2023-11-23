@@ -22,7 +22,7 @@ After completing the steps above, your device should connect to the AP, provided
 Another indicator of a successful end-device registration is seeing the application data from your end-device in the **LoRa AP** (LoAP) or **LoRa Network Server** (LoNES) **logs**. These data should be labeled as **"app_data"** and you can list them by issuing the following commands:
 
 - for LoNES, move to the directory where your **LoNES Dockerfile** is, and run the **"docker logs -n 50 *<container_name>*"** command
-- for LoAP, use the **"sudo journalctl -u -n 50 packet_forwarder"** command
+- for LoAP, use the **"sudo journalctl -u packet_converter -n 50"** command
 
 Application data should be visible in both of these devices, altough you may find them encoded with **base64**. If the *app_data* value is the same as the **appData** value in the **"src/main.cpp"** source code (inside the *loop()* function), your connection is fully functional and your end-device is now ready to send any required data.
 
