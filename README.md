@@ -6,7 +6,7 @@ LoRa@FIIT Multi-armed Bandit  Firmware for ATmega328P
 - Download [Visual Studio Code](https://code.visualstudio.com/)
 - Install PlatformIO in Visual Studio Code
 - Install necessary extension **atmel-avr** for PlatformIO.
-- Install FT232RTL driver for Windows
+- Install [FT232RTL](https://ftdichip.com/drivers/vcp-drivers/) driver for Windows
 - Clone repository [LoMAB](https://github.com/alexandervalach/LoMAB)
 - Clone repository [LoRa@FIIT](https://github.com/loraalex/LoRaFIIT.git) and copy it into the **lib/** directory in the **LoMAB** repository
 - In **"lib/src/lora.h"**, look for the **"MAB_UCB_ENABLED"** and **"CAD_ENABLED"** macros. If needed, set them to 0.
